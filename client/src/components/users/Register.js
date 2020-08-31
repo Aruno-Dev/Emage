@@ -98,7 +98,8 @@ export default class Register extends React.Component {
         this.state.password
       ).then(
         (response) => {
-          this.props.history.push('/login')
+          console.log(response)
+          this.props.history.push('/Login')
           window.location.reload()
      
           this.setState({

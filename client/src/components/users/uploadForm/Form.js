@@ -41,8 +41,10 @@ this.setState({
     console.log(this.file.current.files[0])
     Axios.post('http://localhost:8080/api/image/upload', formData)
       .then((res) => {
-       
+        this.props.history.push('/profile')
+          window.location.reload()
         alert('File Upload success')
+        
       })
       .catch((err) => alert('File Upload Error'))
   }

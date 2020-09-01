@@ -1,4 +1,5 @@
 import React from 'react'
+import Loading from '../interface/Loading'
 import { generatePath } from 'react-router-dom'
 import AuthService from '../../services/auth.service'
 import ImageService from '../../services/image.service'
@@ -40,7 +41,7 @@ export default class List extends React.Component {
     if (error) {
       return <div>Erreur : {error.message}</div>
     } else if (!isLoaded) {
-      return <div>Chargement…</div>
+      return <Loading/>
     } else {
       return (
         <React.Fragment>
